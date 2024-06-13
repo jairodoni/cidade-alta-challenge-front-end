@@ -1,0 +1,51 @@
+@import '@/styles/colors.scss';
+@import '@/styles/themes.scss';
+
+
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  :focus{
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+html {
+  @media (max-width: 1080px) {
+    font-size: 93.75%; //15px
+  }
+  @media (max-width: 720px) {
+    font-size: 87.5%; //14px
+  }
+  @media (max-width: 450px) {
+    font-size: 75%; //12px
+  }
+}
+
+body,
+input,
+button,
+textarea {
+  font: 400 16px 'Lexend', sans-serif;
+  }
+
+body{
+  background: var(--bg-default-grandient);
+  color: var(--text-default);
+  width: 100%;
+  height: 100vh;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
