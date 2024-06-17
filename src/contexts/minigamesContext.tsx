@@ -43,6 +43,10 @@ export function MinigamesProvider({ children }: MinigamesProviderProps) {
 
   useEffect(() => {
     getStorage()
+  }, [])
+
+  useEffect(() => {
+    getStorage()
   }, [currentProfile])
 
   function selectCurrentProfile(id: number) {
