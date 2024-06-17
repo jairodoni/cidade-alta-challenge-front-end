@@ -10,12 +10,15 @@
     "lint:fix": "next lint --fix"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.6.0",
+    "@phosphor-icons/react": "^2.1.6",
     "next": "14.2.4",
-    "phosphor-react": "^1.4.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.51.5",
     "sass": "^1.77.5",
-    "use-dark-mode": "^2.3.1"
+    "use-dark-mode": "^2.3.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",

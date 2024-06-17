@@ -1,5 +1,5 @@
-@import '@/styles/colors.scss';
-@import '@/styles/themes.scss';
+@import '@/styles/themes/colors.scss';
+@import '@/styles/themes/themes.scss';
 
 
 * {
@@ -34,8 +34,9 @@ textarea {
   }
 
 body{
-  background: var(--bg-default-grandient);
+  background: var(--bg-grandient);
   color: var(--text-default);
+  
   width: 100%;
   height: 100vh;
   text-rendering: optimizelegibility;

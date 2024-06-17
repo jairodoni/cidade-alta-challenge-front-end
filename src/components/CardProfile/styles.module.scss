@@ -1,0 +1,112 @@
+@import '@/styles/themes/colors.scss';
+@import '@/styles/themes/themes.scss';
+
+.container {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  
+  hr {
+    width: 100%;
+    border: 2px solid var(--border);
+  }
+
+  .perfil {
+    img {
+      margin-bottom: 0.5rem;
+    }
+    
+    h3 {
+      margin-bottom: 1rem;
+      font-size: 1.75rem;
+      font-weight: 400;
+    }
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+    button {
+      width: 100%;
+      height: 3rem;
+
+      background: var(--card-bg);
+      color: var(--text-default);
+
+      border: none;
+      border-top: 0;
+      border-bottom: 0;
+
+      transition: background 0.2s ease;
+
+      &:hover {
+        background: var(--border);
+      }
+    }
+    
+    .active {
+      background: var(--border);
+    }
+  }
+
+  .ranking {
+    width: 100%;
+    padding: 0.5rem;
+
+    .headerTable {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      
+      h4 {
+        font-weight: 400;
+      }
+    }
+    .tableItem {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 300;
+    }
+
+    .tableItem + .tableItem {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .minigames {
+    width: 100%;
+    
+    text-align: start;
+
+    h4 {
+      padding: 0.5rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+    }
+    
+    .itemList {
+      background: var(--card-bg);
+      height: 3rem;
+      font-weight: 300;
+      padding: 0 0.5rem;
+      display: flex;
+      align-items: center;
+      border-radius: 4px;
+    }
+
+    .itemList + .itemList {
+      margin-top: 0.5rem;
+    }
+    
+    .itemList:hover {
+      filter: brightness(2);
+    }
+  }
+}

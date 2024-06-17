@@ -1,0 +1,63 @@
+@import './colors.scss';
+
+$themes: (
+  'bg-primary': (
+    light: $bg-light,
+    dark: $bg-dark
+  ),
+  'bg-secondary': (
+    light: $bg-2-light,
+    dark: $bg-2-dark
+  ),
+  'bg-grandient': (
+    light: linear-gradient(160deg, $bg-light-top, $bg-light-bottom),
+    dark: linear-gradient(160deg,$bg-dark-top , $bg-dark-bottom 60%)
+  ),
+  'text-default': (
+    light: $text-light,
+    dark: $text-dark
+  ),
+  'text-secondary': (
+    light: $text-2-light,
+    dark: $text-2-dark
+  ),
+  'text-tertiary': (
+    light: $text-3-light,
+    dark: $text-3-dark
+  ),
+  'card-bg': (
+    light: $bg-card-light,
+    dark: $bg-card-dark
+  ),
+  'border': (
+    light: $border-light,
+    dark: $border-dark
+  ),
+  'border-secondary': (
+    light: $border-2-light,
+    dark: $border-2-dark
+  ),
+  'hover': (
+    light: $hover-light,
+    dark: $hover-dark
+  ),
+);
+
+
+@mixin styles($mode) {
+  @each $key, $map in $themes {
+    @each $prop, $color in $map {
+      @if $prop == $mode {
+        --#{$key}: #{$color};
+      }
+    }
+  }
+}
+
+.dark-mode {
+  @include styles("dark");
+}
+
+.light-mode {
+  @include styles("light");
+}

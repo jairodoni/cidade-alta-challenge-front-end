@@ -1,0 +1,50 @@
+@import '@/styles/themes/colors.scss';
+@import '@/styles/themes/themes.scss';
+
+.navbar {
+  width: 100vw;
+  height: 48px;
+
+  background: $gray-800;
+  color: var(--text-default);
+  opacity: 0.95;
+
+  div:first-child {
+    max-width: 1366px;
+    width: 100%;
+    height: 100%;
+
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      span {
+       margin-right: 5px;
+      }
+
+      .darkModeButton{
+        width: 2rem; 
+        height: 2rem; 
+        background: $green-300;
+        border-radius: 8px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        svg {
+          color: $white;
+        }
+      }
+    }
+  }
+}

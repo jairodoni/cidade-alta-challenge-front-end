@@ -1,0 +1,84 @@
+@import '@/styles/themes/colors.scss';
+@import '@/styles/themes/themes.scss';
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    div {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+
+      input {
+        height: 3rem;
+        width: 16rem;
+        padding: 1rem;
+        color: var(--text);
+        border-radius: 4px;
+        border: 2px solid var(--border);
+        background: var(--bg-default);
+      }
+  
+      button {
+        height: 3rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        color:$gray-800;
+        background: $yellow-400;
+        border: 2px solid  $gray-800;
+        border-radius: 4px;
+        margin-left: 0.5rem;
+      }
+    }
+    span {
+      width: 100%;
+      color: $red-light-300;
+      margin-top: 0.5rem;
+      padding-left: 0.5rem;
+    }
+  }
+
+  .listProfiles {
+    max-height: 200px;
+    height: 100%;
+    overflow-y: auto;
+  
+    .profileSelectItem{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      height: 2rem;
+      border-radius: 4px;
+      font-size: 1.25rem;
+      font-weight: 500;
+      background: $gray-500;
+      margin-bottom: 5px;
+      transition: filter 0.2s ease;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+
+      &:active {
+        filter: brightness(1);
+      }
+    }
+  }
+}

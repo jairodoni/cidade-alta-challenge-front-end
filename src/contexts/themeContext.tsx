@@ -17,18 +17,13 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   const storageKey = 'dark-theme-cidade-alta-minigame@1.0.0v'
 
   // classNameLight
-  const {
-    value: statusDarkMode,
-    toggle: handleThemeToggle,
-    disable: disableDarkMode,
-  } = useDarkMode(false, { storageKey })
+  const { value: statusDarkMode, toggle: handleThemeToggle } = useDarkMode(
+    true,
+    { storageKey },
+  )
 
   useEffect(() => {
-    const themeModeLocalStorage = localStorage.getItem(storageKey)
-
-    if (themeModeLocalStorage === null) {
-      disableDarkMode()
-    }
+    localStorage.getItem(storageKey)
   }, [])
 
   return (
